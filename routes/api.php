@@ -27,3 +27,18 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
 
 });
+
+
+Route::resource('tabela-de-testes', App\Http\Controllers\API\tabelaDeTesteAPIController::class)
+    ->except(['create', 'edit']);
+
+
+
+
+
+
+Route::resource('tabela-de-testes', App\Http\Controllers\API\tabelaDeTesteAPIController::class)
+    ->except(['create', 'edit']);
+
+Route::resource('orion-nomes-publicacaos', App\Http\Controllers\API\OrionNomesPublicacaoAPIController::class)
+    ->except(['create', 'edit']);

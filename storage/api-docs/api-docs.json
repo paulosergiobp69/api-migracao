@@ -1,0 +1,593 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "InfyOm Laravel Generator APIs",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/api"
+        }
+    ],
+    "paths": {
+        "/orion-nomes-publicacaos": {
+            "get": {
+                "tags": [
+                    "OrionNomesPublicacao"
+                ],
+                "summary": "getOrionNomesPublicacaoList",
+                "description": "Get all OrionNomesPublicacaos",
+                "operationId": "4fb7ee27b8d39537cfe933200d3285a1",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/OrionNomesPublicacao"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "OrionNomesPublicacao"
+                ],
+                "summary": "createOrionNomesPublicacao",
+                "description": "Create OrionNomesPublicacao",
+                "operationId": "89a4637e25db9eec8b52fce5c1902b1a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OrionNomesPublicacao"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/OrionNomesPublicacao"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orion-nomes-publicacaos/{id}": {
+            "get": {
+                "tags": [
+                    "OrionNomesPublicacao"
+                ],
+                "summary": "getOrionNomesPublicacaoItem",
+                "description": "Get OrionNomesPublicacao",
+                "operationId": "fb1e198ababe1c70266d2acc525f03f1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of OrionNomesPublicacao",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/OrionNomesPublicacao"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "OrionNomesPublicacao"
+                ],
+                "summary": "updateOrionNomesPublicacao",
+                "description": "Update OrionNomesPublicacao",
+                "operationId": "cf16f1f3a1078906170270cc4c6c6285",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of OrionNomesPublicacao",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OrionNomesPublicacao"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/OrionNomesPublicacao"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "OrionNomesPublicacao"
+                ],
+                "summary": "deleteOrionNomesPublicacao",
+                "description": "Delete OrionNomesPublicacao",
+                "operationId": "ed282e1afbd4385fe67d706cddfdb36e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of OrionNomesPublicacao",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tabela-de-testes": {
+            "get": {
+                "tags": [
+                    "tabelaDeTeste"
+                ],
+                "summary": "gettabelaDeTesteList",
+                "description": "Get all tabelaDeTestes",
+                "operationId": "4a4c15dce0d1c58ee3283daf083184ab",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/tabelaDeTeste"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tabelaDeTeste"
+                ],
+                "summary": "createtabelaDeTeste",
+                "description": "Create tabelaDeTeste",
+                "operationId": "6d71391242b63cbe9f15a0c5bf5286ed",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/tabelaDeTeste"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/tabelaDeTeste"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tabela-de-testes/{id}": {
+            "get": {
+                "tags": [
+                    "tabelaDeTeste"
+                ],
+                "summary": "gettabelaDeTesteItem",
+                "description": "Get tabelaDeTeste",
+                "operationId": "3a155575451e5f42aa88949233b53756",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of tabelaDeTeste",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/tabelaDeTeste"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tabelaDeTeste"
+                ],
+                "summary": "updatetabelaDeTeste",
+                "description": "Update tabelaDeTeste",
+                "operationId": "240d43c8ec540208dc5269248d7618ca",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of tabelaDeTeste",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/tabelaDeTeste"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/tabelaDeTeste"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tabelaDeTeste"
+                ],
+                "summary": "deletetabelaDeTeste",
+                "description": "Delete tabelaDeTeste",
+                "operationId": "96c8dea492bb046899f411a5a14669e5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of tabelaDeTeste",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "OrionNomesPublicacao": {
+                "required": [],
+                "properties": {
+                    "codigo": {
+                        "description": "codigo",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "pf": {
+                        "description": "pf",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "tipo": {
+                        "description": "tipo publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "oab": {
+                        "description": "oab publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "uf": {
+                        "description": "uf publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "cpf": {
+                        "description": "cpf publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "nome": {
+                        "description": "nome publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "dj": {
+                        "description": "dj publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "quem_recebe": {
+                        "description": "quem recebe",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "status": {
+                        "description": "status publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "possui_homonimo": {
+                        "description": "Possui homônimo publicacao",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "deleted_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            },
+            "tabelaDeTeste": {
+                "required": [],
+                "properties": {
+                    "nome": {
+                        "description": "",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "endereco": {
+                        "description": "",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "data_inicial": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "situacao": {
+                        "description": "",
+                        "type": "string",
+                        "readOnly": false,
+                        "nullable": true
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    },
+                    "deleted_at": {
+                        "description": "",
+                        "type": "string",
+                        "format": "date-time",
+                        "readOnly": true,
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
